@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #include <iostream>\
+#include <cmath>\
+using namespace std;\
+int main() \{\
+    //Dictionary\
+    char a[65]=" ABCDEFGHIJKLMN\'d1OPQRSTVWXYZabcdefghijklmn\'f1opqrstvwxyz123456789";\
+    \
+    //Input of Message\
+    char CharToEncrypt[] = "Hola Will este es un mensaje encriprado con RSA";\
+    \
+    //List of Numbers\
+    int PreEncryptedList[sizeof(CharToEncrypt)-1];\
+    int PostEncryptedList[sizeof(CharToEncrypt)-1];\
+    \
+    //Transforming Input into a List of Numbers\
+    for(int j=0; j<sizeof(CharToEncrypt)-1; j++)\{\
+        for(int i=0; i<64; i++)\{\
+            if(CharToEncrypt[j] == a[i])\{\
+                PreEncryptedList[j] = i;\
+            \}\
+        \}\
+    \}\
+    \
+    //Input of Encryption Keys\
+    cout <<"Type the key:\\n";\
+    int exponent, mod;\
+    cin >> exponent >> mod;\
+    \
+    //Encryption\
+    cout<<"Encrypted Message: \\n";\
+    for(int k=0; k<sizeof(PreEncryptedList)/4; k++)\{\
+        int FirtsPart = pow(PreEncryptedList[k], exponent);\
+        int SecondPart = FirtsPart % mod;\
+        PostEncryptedList[k] = SecondPart;\
+        //Printing Encrypted Message\
+        cout << PostEncryptedList[k];\
+    \}\
+    return 0;\
+\}}

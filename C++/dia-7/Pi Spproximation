@@ -1,0 +1,22 @@
+(base) iMac-de-Moises:dia-7 MoisesAdame$ g++ pi.cpp
+(base) iMac-de-Moises:dia-7 MoisesAdame$ ./a.out
+10000000
+3.1405132
+(base) iMac-de-Moises:dia-7 MoisesAdame$ g++ pi.cpp
+(base) iMac-de-Moises:dia-7 MoisesAdame$ ./a.out
+1000000000
+(base) iMac-de-Moises:dia-7 MoisesAdame$ ./a.out
+100000000 
+3.1413358
+(base) iMac-de-Moises:dia-7 MoisesAdame$ ./a.out
+1000000000
+3.141411204
+(base) iMac-de-Moises:dia-7 MoisesAdame$ 
+
+
+
+
+
+
+
+

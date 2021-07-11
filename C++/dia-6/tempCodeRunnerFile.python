@@ -1,0 +1,13 @@
+def goldbach(x):
+    while(x != 1):
+        if(x%2 == 0):
+            res = x/2
+            print(res)
+            goldbach(res)
+        elif (x%2 != 0):
+            res = 3*x +1
+            print(res)
+            goldbach(res)
+        break
+goldbach(7)
+

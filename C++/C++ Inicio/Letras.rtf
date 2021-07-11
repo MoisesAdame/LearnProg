@@ -1,0 +1,470 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #include <iostream>\
+using namespace std;\
+\
+//Dictionary\
+    //Letter A\
+    bool A[25]=\{false,false,true,false,false,false,true,false,true,false,true,true,true,true,true,true,false,false,false,true,true,false,false,false,true\};\
+\
+    \
+    //Letter B\
+    bool B[25]=\{true,true,true,true,false,true,false,false,false,true,true,true,true,true,true,true,false,false,false,true,true,true,true,true,false\};\
+\
+    \
+    //Letter C\
+    bool C[25]=\{false,true,true,true,true,true,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,true,true,true,true\};\
+\
+\
+    //Letter D\
+    bool D[25]=\{true,true,true,true,false,true,false,false,false,true,true,false,false,false,true,true,false,false,false,true,true,true,true,true,false\};\
+\
+\
+    //Letter E\
+    bool E[25]=\{true,true,true,true,true,true,false,false,false,false,true,true,true,false,false,true,false,false,false,false,true,true,true,true,true\};\
+\
+\
+    //Letter F\
+    bool F[25]=\{true,true,true,true,true,true,false,false,false,false,true,true,true,false,false,true,false,false,false,false,true,false,false,false\};\
+\
+\
+    //Letter G\
+    bool G[25]=\{false,true,true,true,true,true,false,false,false,false,true,false,false,true,true,true,false,false,false,true,false,true,true,true,true\};\
+\
+    \
+    //Letter H\
+    bool H[25]=\{true,false,false,false,true,true,false,false,false,true,true,true,true,true,true,true,false,false,false,true,true,false,false,false,true\};\
+\
+    \
+    //Letter I\
+    bool I[25]=\{true,true,true,true,true,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false,true,true,true,true,true\};\
+\
+    \
+    //Letter J\
+    bool J[25]=\{true,true,true,true,true,false,false,true,false,false,false,false,true,false,false,true,false,true,false,false,false,true,true,false,false\};\
+\
+    \
+    //Letter K\
+    bool K[25]=\{true,false,false,false,true,true,false,false,true,false,true,true,true,false,false,true,false,false,true,false,true,false,false,false,true\};\
+\
+    \
+    //Letter L\
+    bool L[25]=\{true,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,true,true,true,true\};\
+\
+    \
+    //Letter M\
+    bool M[25]=\{true,false,false,false,true,true,true,false,true,true,true,false,true,false,true,true,false,false,false,true,true,false,false,false,true\};\
+\
+    \
+    //Letter N\
+    bool N[25]=\{true,false,false,false,true,true,true,false,false,true,true,false,true,false,true,true,false,false,true,true,true,false,false,false,true\};\
+\
+    \
+    //Letter O\
+    bool O[25]=\{false,true,true,true,false,true,false,false,false,true,true,false,false,false,true,true,false,false,false,true,false,true,true,true,false\};\
+\
+    \
+    //Letter P\
+    bool P[25]=\{true,true,true,true,false,true,false,false,false,true,true,false,false,false,true,true,true,true,true,false,true,false,false,false,false\};\
+\
+    \
+    //Letter Q\
+    bool Q[25]=\{false,true,true,true,false,true,false,false,false,true,true,false,true,false,true,true,false,false,true,true,false,true,true,true,true\};\
+\
+    \
+    //Letter R\
+    bool R[25]=\{false,true,true,true,false,true,false,false,false,true,true,false,false,false,true,true,true,true,true,false,true,false,false,false,true\};\
+\
+    \
+    //Letter S\
+    bool S[25]=\{false,true,true,true,false,true,false,false,false,false,false,true,true,true,false,false,false,false,false,true,false,true,true,true,false\};\
+\
+    \
+    //Letter T\
+    bool T[25]=\{true,true,true,true,true,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false\};\
+\
+    \
+    //Letter U\
+    bool U[25]=\{true,false,false,false,true,true,false,false,false,true,true,false,false,false,true,true,false,false,false,true,false,true,true,true,false\};\
+\
+    \
+    //Letter V\
+    bool V[25]=\{true,false,false,false,true,true,false,false,false,true,true,false,false,false,true,false,true,false,true,false,false,false,true,false,false\};\
+\
+    \
+    //Letter W\
+    bool W[25]=\{true,false,false,false,true,true,false,false,false,true,true,false,true,false,true,true,true,false,true,true,true,false,false,false,true\};\
+\
+    \
+    //Letter X\
+    bool X[25]=\{true,false,false,false,true,false,true,false,true,false,false,false,true,false,false,false,true,false,true,false,true,false,false,false,true\};\
+\
+    \
+    //Letter Y\
+    bool Y[25]=\{true,false,false,false,true,false,true,false,true,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false\};\
+    \
+    \
+    //Letter Z\
+    bool Z[25]=\{true,true,true,true,true,false,false,false,true,false,false,false,true,false,false,false,true,false,false,false,true,true,true,true,true\};\
+ \
+    \
+    //Compiler\
+int main () \{\
+	\
+	//Type a Word\
+    char word[]="W I L L";\
+    \
+    int sizeword = sizeof(word)-1;\
+    \
+    for(int i=0; i<sizeword; i++)\{\
+        if(word[i]=='A')\{\
+            for(int i=0; i<25; i++)\{\
+                if(A [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='B')\{\
+            for(int i=0; i<25; i++)\{\
+                if(B [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='C')\{\
+            for(int i=0; i<25; i++)\{\
+                if(C [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='D')\{\
+            for(int i=0; i<25; i++)\{\
+                if(D [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='E')\{\
+            for(int i=0; i<25; i++)\{\
+                if(E [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='F')\{\
+            for(int i=0; i<25; i++)\{\
+                if(F [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='G')\{\
+            for(int i=0; i<25; i++)\{\
+                if(G [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='H')\{\
+            for(int i=0; i<25; i++)\{\
+                if(H [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='I')\{\
+            for(int i=0; i<25; i++)\{\
+                if(I [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='J')\{\
+            for(int i=0; i<25; i++)\{\
+                if(J [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='K')\{\
+            for(int i=0; i<25; i++)\{\
+                if(K [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='L')\{\
+            for(int i=0; i<25; i++)\{\
+                if(L [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='M')\{\
+            for(int i=0; i<25; i++)\{\
+                if(M [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='N')\{\
+            for(int i=0; i<25; i++)\{\
+                if(N [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='O')\{\
+            for(int i=0; i<25; i++)\{\
+                if(O [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='P')\{\
+            for(int i=0; i<25; i++)\{\
+                if(P [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='Q')\{\
+            for(int i=0; i<25; i++)\{\
+                if(Q [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='R')\{\
+            for(int i=0; i<25; i++)\{\
+                if(R [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='S')\{\
+            for(int i=0; i<25; i++)\{\
+                if(S [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='T')\{\
+            for(int i=0; i<25; i++)\{\
+                if(T [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='U')\{\
+            for(int i=0; i<25; i++)\{\
+                if(U [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='V')\{\
+            for(int i=0; i<25; i++)\{\
+                if(V [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='W')\{\
+            for(int i=0; i<25; i++)\{\
+                if(W [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='X')\{\
+            for(int i=0; i<25; i++)\{\
+                if(X [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='Y')\{\
+            for(int i=0; i<25; i++)\{\
+                if(Y [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]=='Z')\{\
+            for(int i=0; i<25; i++)\{\
+                if(Z [i]==1)\{\
+                    cout<<"*";\
+                \}\
+                else\{\
+                    cout<<" ";\
+                \}\
+                if(i%5 == 4 )\{\
+                    cout<<"\\n";\
+                \}\
+            \}\
+        \}\
+        else if(word[i]==' ')\{\
+        	cout<<"\\n";\
+        \}\
+    \}\
+    return 0;\
+\
+\}\
+}

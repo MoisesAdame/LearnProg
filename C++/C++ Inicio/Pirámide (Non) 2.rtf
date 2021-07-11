@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #include <iostream>\
+using namespace std;\
+\
+void pyramid (int lines)\{\
+    string space = " ", asteryx = "*";\
+    for (int i =0; i< lines; i++)\{\
+        for (int j=(lines-1-i); j>0; j--)\{\
+            cout << space;\
+        \}\
+        for (int k=1; k<=(2*i +1); k++)\{\
+            cout << asteryx;\
+        \}\
+        cout << "\\n";\
+    \}\
+\}\
+\
+int main() \{\
+    cout<<"PYRAMID\\n";\
+\
+    pyramid(5);\
+\
+    return 0;\
+\}}
