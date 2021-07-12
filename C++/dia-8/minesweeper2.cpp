@@ -28,20 +28,23 @@ int main () {
     
     for(auto &c : board_s){
         if(c == "*"){
-            (*center)+=9;
+            (*center)=9;
+            *(center-columns) += 1;
+            *(center+columns) += 1;
+            if(count_board_c%columns != columns-1){
+                *(center+1) += 1;
+                *(center-columns+1) += 1; //Arriba derecha
+                *(center+columns+1) += 1; //Abajo derecha
+            }
+            else if (count_board_c%columns != 0){
+                *(center-1) += 1;
+                *(center+columns-1) += 1; //Abajo izquierda
+                *(center-columns-1) += 1; //Arriba izquierda
+            }
         }
-        else if(*(&c +1) == "*" && count_board_c%columns != columns-1){
-            (*center)++;
-        }
-        else if(*(&c -1) == "*" && count_board_c%columns != 0 ){
-            (*center)++;
-        }
-
-
         count_board_c++;
         center++;
     }
-
 
     int count_print = 0;
     for(auto c : board_i){
@@ -51,7 +54,5 @@ int main () {
         }
         count_print++;
     }
-
-
     return 0;
 }
