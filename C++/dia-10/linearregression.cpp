@@ -18,27 +18,24 @@ int main () {
     }
 
     //Sum of vx, vx square and vx*vy
-    float sum_vx, sum_vx_squared, sum_vx_vy, sum_vy, counter;
-    sum_vx = sum_vx_squared = sum_vx_vy = sum_vy = counter = 0;
+    float sum_vx, sum_vx_squared, sum_vx_vy, sum_vy;
+    sum_vx = sum_vx_squared = sum_vx_vy = sum_vy = 0;
+    size_t counter = 0;
     for(auto &a : vx){
         sum_vx += a;
         sum_vx_squared += (a*a);
-        for(auto &b : vy){
-            sum_vx_vy += (b*a);
-            sum_vy += b;
-        }
-        ++counter;
+        sum_vx_vy += (vy[counter]*a);
+        counter += 1;
+    }
+    for(auto &b : vy){
+        sum_vy += b;
     }
 
     //Obtaining m (slope)
-    float a = ((sum_vy*sum_vx_squared) - (sum_vx*sum_vx_vy));
-    float b = (((counter)*sum_vx_squared) - (sum_vx*sum_vx));
-    float c = (((counter)*sum_vx_vy) - (sum_vy*sum_vx));
-    float d = (((counter)*sum_vx_squared) - (sum_vx*sum_vx));
+    float m = ((((counter)*sum_vx_vy) - (sum_vy*sum_vx))/(((counter)*sum_vx_squared) - (sum_vx*sum_vx)));
+    //Obtaining b (coordinate axis)
+    float b = (((sum_vy*sum_vx_squared) - (sum_vx*sum_vx_vy))/(((counter)*sum_vx_squared) - (sum_vx*sum_vx)));
 
-    float m = a/b;
-    float b_b = c/d;
-
-    cout << "y = " << m << "x +" << b_b <<endl;
+    cout << "y = " << m << "x +" << b <<endl;
     return 0;
 }
