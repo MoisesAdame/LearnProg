@@ -25,7 +25,7 @@ int main () {
         sum_vx += a;
         sum_vx_squared += (a*a);
         sum_vx_vy += (vy[counter]*a);
-        counter += 1;
+        ++counter;
     }
     for(auto &b : vy){
         sum_vy += b;
@@ -36,6 +36,7 @@ int main () {
     //Obtaining b (coordinate axis)
     float b = (((sum_vy*sum_vx_squared) - (sum_vx*sum_vx_vy))/(((counter)*sum_vx_squared) - (sum_vx*sum_vx)));
 
-    cout << "y = " << m << "x +" << b <<endl;
+    //User Interface
+    cout << "y = " << m << "x " << (b>0 ? "+" : "")<< b <<endl;
     return 0;
 }
