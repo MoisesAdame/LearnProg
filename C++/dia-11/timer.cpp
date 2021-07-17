@@ -13,7 +13,7 @@ int main () {
     int days = floor(time_elapsed/518400);
     int hours = floor((time_elapsed - days*518400)/3600);
     int minutes =  floor((time_elapsed - days*518400 - hours*3600)/60);
-    int seconds =  floor(time_elapsed - days*518400 - hours*3600 - minutes*60);
+    int seconds = (time_elapsed - days*518400 - hours*3600 - minutes*60);
 
 
 
