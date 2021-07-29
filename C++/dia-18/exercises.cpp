@@ -1,3 +1,7 @@
+/*
+link: https://edabit.com/challenge/wgnmQTbfssuhvZHqe
+*/
+
 #include <iostream>
 using namespace std;
 
