@@ -15,19 +15,7 @@ int main () {
     for(auto &a : vx){
         sum_vx += a;
         sum_vx_squared += (a*a);
-        sum_vx_vy += (vy[counter]*a);
-        ++counter;
-    }
-    for(auto &b : vy){
-        sum_vy += b;
-    }
-
-    //Obtaining m (slope)
-    float m = ((((counter)*sum_vx_vy) - (sum_vy*sum_vx))/(((counter)*sum_vx_squared) - (sum_vx*sum_vx)));
-    //Obtaining b (coordinate axis)
-    float b = (((sum_vy*sum_vx_squared) - (sum_vx*sum_vx_vy))/(((counter)*sum_vx_squared) - (sum_vx*sum_vx)));
-
-    //User Interface
-    cout << "y = " << m << "x " << (b>0 ? "+" : "")<< b <<endl;
+        sum_vx_vy 
+        
     return 0;
 }
